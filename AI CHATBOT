@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class chatbot {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String userInput;
+
+        System.out.println("----- Simple Java ChatBot -----");
+        System.out.println("Type something to chat. Type 'bye' to end.\n");
+
+        while (true) {
+            System.out.print("You: ");
+            userInput = scan.nextLine();
+            userInput = userInput.toLowerCase(); 
+
+            
+            if (userInput.contains("bye")) {
+                System.out.println("Bot: Okay, bye! Take care.");
+                break;
+            }
+
+           
+            if (userInput.contains("hello") || userInput.contains("hi")) {
+                System.out.println("Bot: Hey there! :)");
+            } else if (userInput.contains("how are you")) {
+                System.out.println("Bot: I'm just code, but I'm working fine!");
+            } else if (userInput.contains("your name")) {
+                System.out.println("Bot: I'm just a chatbot made in Java.");
+            } else if (userInput.contains("what is ai")) {
+                System.out.println("Bot: AI means Artificial Intelligence. It's about making computers think smart.");
+            } else if (userInput.contains("who made you")) {
+                System.out.println("Bot: I was created by a student learning Java.");
+            } else if (userInput.contains("help")) {
+                System.out.println("Bot: You can ask about AI, my name, who made me, or just say hello!");
+            } else {
+               
+                System.out.println("Bot: Hmm... I didn’t get that. Try asking something else?");
+            }
+        }
+
+        scan.close();
+    }
+}
